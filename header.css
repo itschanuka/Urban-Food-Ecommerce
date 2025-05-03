@@ -1,0 +1,134 @@
+/* Assuming 'components.css' might contain header-related styles, 
+   we'll include the import. If not, you might need to look there. */
+@import url('components.css');
+
+/* These styles seem related to the main background and hero section, 
+   likely appearing above the main content, so they are included. */
+.home-bg{
+   background: url(../images/home-bg.jpg) no-repeat;
+   background-size: cover;
+   background-position: center;
+}
+
+.home-bg .home{
+   display: flex;
+   align-items: center;
+   min-height: 60vh;
+}
+
+.home-bg .home .content{
+   width: 50rem;
+}
+
+.home-bg .home .content span{
+   color:var(--orange);
+   font-size: 2.5rem;
+}
+
+.home-bg .home .content h3{
+   font-size: 3rem;
+   text-transform: uppercase;
+   margin-top: 1.5rem;
+   color:var(--black);
+}
+
+.home-bg .home .content p{
+   font-size: 1.6rem;
+   padding:1rem 0;
+   line-height: 2;
+   color:var(--light-color);
+}
+
+.home-bg .home .content a{
+   display: inline-block;
+   width: auto;
+}
+
+/* This section appears to be for product categories displayed on the home page, 
+   which is a common element in the header or just below it. */
+.home-category .box-container{
+   display: grid;
+   grid-template-columns: repeat(auto-fit, 27rem);
+   gap:1.5rem;
+   justify-content: center;
+   align-items: flex-start;
+}
+
+.home-category .box-container .box{
+   padding:2rem;
+   text-align: center;
+   border:var(--border);
+   background-color: var(--white);
+   box-shadow: var(--box-shadow);
+   border-radius: .5rem;
+}
+
+.home-category .box-container .box img{
+   width: 100%;
+   margin-bottom: 1rem;
+}
+
+.home-category .box-container .box h3{
+   text-transform: uppercase;
+   color:var(--black);
+   padding:1rem 0;
+   font-size: 2rem;
+}
+
+.home-category .box-container .box p{
+   line-height: 2;
+   font-size: 1.5rem;
+   color:var(--light-color);
+   padding:.5rem 0;
+}
+
+.home-category{
+   padding-bottom: 0;
+}
+
+/* This section is for the search form, which is often in or near the header. */
+.search-form form{
+   display: flex;
+   gap:1.5rem;
+   align-items: center;
+}
+
+.search-form form .box{
+   width: 100%;
+   padding:1.4rem;
+   border:var(--border);
+   margin:1rem 0;
+   background-color: var(--white);
+   box-shadow: var(--box-shadow);
+   font-size: 2rem;
+   color:var(--black);
+   border-radius: .5rem;
+}
+
+.search-form form .btn{
+   display: inline-block;
+   width: auto;
+   margin-top: 0;
+}
+
+/* These media queries adjust layouts for smaller screens, which can affect header elements. */
+@media (max-width:768px){
+
+   .home-bg{
+      background-position: left;
+   }
+
+   .home-bg .home{
+      justify-content: center;
+      text-align: center;
+   }
+
+}
+
+@media (max-width:450px){
+
+   .home-category .box-container{
+      grid-template-columns: 1fr;
+   }
+
+}
